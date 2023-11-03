@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:timealy/application/providers/home_page_provider.dart';
+import 'package:timealy/application/providers/onboarding_provider.dart';
 import 'package:timealy/application/providers/tick_state_provider.dart';
+import 'package:timealy/presentation/pages/onboarding.dart';
 
 import 'presentation/pages/home_page.dart';
 
@@ -23,6 +25,9 @@ class MyApp extends StatelessWidget {
           ChangeNotifierProvider(
             create: (context) => HomePageProvider(),
           ),
+          ChangeNotifierProvider(
+            create: (context) => OnboardingStateProvider(),
+          ),
         ],
         child: MaterialApp(
           title: 'Timealy',
@@ -31,7 +36,7 @@ class MyApp extends StatelessWidget {
             useMaterial3: true,
           ),
           debugShowCheckedModeBanner: false,
-          home: const MyHomePage(title: 'Mindful Meal Timer'),
+          home: OnboardingPage(),
         ));
   }
 }

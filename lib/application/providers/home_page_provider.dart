@@ -20,4 +20,10 @@ class HomePageProvider extends ChangeNotifier {
     _isStarted = false;
     notifyListeners();
   }
+
+  void resetApp() {
+    _isStarted = false;
+    _state = 0;
+    notifyListeners();
+  }
 }

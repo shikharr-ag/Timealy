@@ -25,10 +25,6 @@ class ControlButtons extends StatelessWidget {
             SizedBox(
               width: width * 0.6,
               child: ElevatedButton(
-                child: Text(
-                  tickProv.tickCount > 0 ? 'Pause' : 'Start',
-                  style: buttonTextStyle,
-                ),
                 onPressed: () {
                   if (prov.isStarted && tickProv.tickCount > 0) {
                     prov.pause();
@@ -44,6 +40,10 @@ class ControlButtons extends StatelessWidget {
                     borderRadius: BorderRadius.circular(5.0),
                   ),
                 ),
+                child: Text(
+                  tickProv.tickCount > 0 ? 'Pause' : 'Start',
+                  style: buttonTextStyle,
+                ),
               ),
             ),
             if (prov.isStarted)
@@ -53,25 +53,21 @@ class ControlButtons extends StatelessWidget {
                   return Consumer<TickStateProvider>(
                       builder: (context, tickProv, _) {
                     return ElevatedButton(
-                      child: Text(
-                        "LET'S STOP I'M FULL NOW",
-                        style: buttonTextStyle.copyWith(
-                            color: Colors.white, fontWeight: FontWeight.w300),
-                      ),
                       onPressed: () {
-                        if (prov.isStarted) {
-                          prov.pause();
-                          tickProv.stopCount();
-                        } else {
-                          prov.start();
-                          tickProv.startCount(player);
-                        }
+                        prov.pause();
+                        prov.resetApp();
+                        tickProv.stopCount();
                       },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: bgColor,
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(5.0),
                             side: BorderSide(color: Colors.white)),
+                      ),
+                      child: Text(
+                        "LET'S STOP I'M FULL NOW",
+                        style: buttonTextStyle.copyWith(
+                            color: Colors.white, fontWeight: FontWeight.w300),
                       ),
                     );
                   });

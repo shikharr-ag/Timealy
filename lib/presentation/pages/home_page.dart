@@ -10,9 +10,7 @@ import '../core/sound_button.dart';
 
 class MyHomePage extends StatefulWidget {
   static const routeName = '/home';
-  const MyHomePage({super.key, required this.title});
-
-  final String title;
+  const MyHomePage({super.key});
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
@@ -31,12 +29,12 @@ class _MyHomePageState extends State<MyHomePage> {
     MediaQueryData obj = MediaQuery.of(context);
     AppBar ab = AppBar(
       backgroundColor: bgColor,
-      title: Text(
-        widget.title,
+      title: const Text(
+        appbarTitle,
         style: titleStyle,
       ),
       centerTitle: true,
-      leading: BackButton(
+      leading: const BackButton(
         color: Colors.white,
       ),
     );
@@ -65,10 +63,10 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             const HeaderMessage(),
             const MealStopwatch(),
-            Spacer(),
-            SoundButton(),
+            const Spacer(),
+            const SoundButton(),
             ControlButtons(player: player, height: height, width: width),
-            Spacer(),
+            const Spacer(),
           ],
         ),
       ),
