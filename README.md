@@ -1,16 +1,14 @@
 
-
+The app can be installed from  : https://i.diawi.com/JreN5W
 
 App Screenshots
 
 ![screenshot_1](https://github.com/shikharr-ag/Timealy/assets/52531507/f6e094d1-4a4c-47a9-9aa2-c9d2b3fdec66)![screenshot_2](https://github.com/shikharr-ag/Timealy/assets/52531507/d4e9ea2d-3b3b-419a-94a0-d35d177aace1)![screenshot_3](https://github.com/shikharr-ag/Timealy/assets/52531507/57695d39-4792-4c86-992b-160043c68489)![screenshot_4](https://github.com/shikharr-ag/Timealy/assets/52531507/a3b888bd-ba1e-4f5b-ac20-fd39fd272054)
 
 
+**Timealy App Documentation**
 
-
-Timealy App Documentation
-
-Table of Contents
+_**Table of Contents**_
 
 Introduction
 Getting Started
